@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <variable
+                name="employee"
+                type="com.waytojava.recyclerviewkotlinmvvm.Employee"/>
+    </data>
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(employee.id)}"
+        />
+
+
+        <TextView
+                android:text="@{employee.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{employee.email}"
+        />
+
+    </LinearLayout>
+
+</layout>
